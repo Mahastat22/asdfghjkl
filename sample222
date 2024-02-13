@@ -1,0 +1,10 @@
+!pip install transformers
+
+from transformers import pipeline
+
+pipe = pipeline(model="facebook/bart-large-mnli")
+
+pipe(" Our new CMO, Sandy will join us on Wednesday. Welcome him with a loud cheer!! ",
+    candidate_labels=['Upgrades','Partnerships','Team updates','Events','Market insights','ICO announcements','White Paper release','ICO updates',
+'NFT release','Partnership with NFT artists','Platform updates','Community discussion / AMAs','Airdrops','Contests / Give-aways','Regulatory updates','Security updates'
+],)
